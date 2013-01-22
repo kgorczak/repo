@@ -14,7 +14,7 @@
     echo "Delta wynosi: $DELTA"
      echo "Pierwiastek z delty wynosi: $PIERW"
     
-if [ $A -le 0 ]; then
+if [ $A == 0 ]; then
 echo " A <= 0, brak rozwiazania"
 
 exit 0
