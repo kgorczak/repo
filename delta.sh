@@ -12,7 +12,14 @@
     CZYZERO=`echo "$DELTA==0" | bc`
     CZYWIEKSZE=`echo "$DELTA>0" |bc`
     echo "Delta wynosi: $DELTA"
-     echo "Pierwiastek z delty wynosi: $PIERW"    
+     echo "Pierwiastek z delty wynosi: $PIERW"
+    
+if [ $A -le 0 ]; then
+echo " A <= 0, brak rozwiazania"
+
+exit 0
+fi
+
         if [ "$CZYZERO" = 1 ]; then
            P0=`echo "scale=5 ;(-1*$B)/(2*$A)" | bc`
             echo "Rownanie posiada jeden pierwiastek: $P0"
@@ -23,6 +30,8 @@
         else
             echo "To rownanie nie posiada pierwiastkow"
         fi
+
+
 
 
 
