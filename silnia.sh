@@ -20,19 +20,19 @@ function factorial(){
 	done
 
 	#Drukowanie wyniku
-	echo "Factorial is: $result"
+	echo "Silnia to: $result"
 exit 0
 }
 
 #Sprawdzam czy liczba argumentow jest wieksza niz 1, jezeli tak to koniec
 if [ $# -gt 1 ]; then
-        echo "Error, too many arguments!"
+        echo "ZA DUŻO ARGUMENTOW"
         exit 1
 fi
 
 #Sprawdzam czy nie podano zadnych argumentow
 if [ $# -eq 0 ]; then
-        echo "No agruments, enter the number in the range: 0-20"
+        echo "Brak argumentow, wpisz liczbe w przedziale: 0-20"
         read hand
     #Sprawdzam czy podany argument w takcie dzialania skryptu jest liczba i jest z zakresu (0 - 20)
         if [ $hand -eq $hand 2> /dev/null ] && [ $hand -ge 0 2> /dev/null ] && [ $hand -le 20 2> /dev/null ]; then
@@ -41,18 +41,18 @@ if [ $# -eq 0 ]; then
 		#Warunki spełnione, licz silnie
 		factorial
         else
-                echo "$hand it's wrong argument, must be number in range: 0-20"
+                echo "$hand zla liczba, musi byc w przedziale: 0-20"
                 exit 1
     fi
 else
     #Sprawdzam czy podany argument z wiersza polecen jest liczba i i jest z zakresu (0 - 20)
     if [ $1 -eq $1 2> /dev/null ] && [ $1 -ge 0 2> /dev/null ] && [ $1 -le 20 2> /dev/null ]; then
         number=$1
-        echo "Start counting factorial: $number!"
+        echo "Obliczanie silni: $number!"
 		#Warunki spełnione, licz silnie
 		factorial
         else
-                echo "$1 it's wrong argument, must be number in range: 0-20"
+                echo "$1 Zly argument, musi byc w przedziale 0-20"
         exit 1
     fi
 fi
